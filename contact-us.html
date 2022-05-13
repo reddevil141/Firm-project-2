@@ -1,0 +1,126 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/aos.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/responsiveslides.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/6c4a20b315.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <header id="header" class="fixed-top">
+        <nav class="navbar navbar-default">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> <span class="sr-only">Toggle
+                        navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span
+                        class="icon-bar"></span> </button>
+                <a class="navbar-brand" href="#"><img src="image/logo.png" /></a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="service.html">Services</a></li>
+                    <li><a href="contact-us.html">Contact us</a></li>
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div>
+  <main>
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="head-section">
+                    <h3 class="sub-heading-1">Reach Us</h3>
+                    <h2 class="main_heading">Contact Us</h2>
+                </div>
+            </div>
+            <div class="container cont-btm">
+                <div class="row mt-5">
+                    <div class="col-lg-6 col-md-6 aos-init aos-animate" data-aos="fade-up">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3752.34805459101!2d75.31770351471084!3d19.8675197866387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdb9861a6d01f43%3A0x3a1b932d329091e9!2sGovernment%20College%20Of%20Engineering%2C%20Aurangabad!5e0!3m2!1sen!2sin!4v1649486458290!5m2!1sen!2sin"
+                            width="565" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="col-lg-6 col-md-6" data-aos="fade-up">
+                        <form action="#" method="post" role="form" class="cont-form">
+                            <div class="form-row row">
+                                <div class="col-md-6 form-group">
+                                    <input type="text" name="name" class="form-control" id="name"
+                                        placeholder="Your Name" />
+                                    <div class="validate"></div>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <input type="email" class="form-control" name="email" id="email"
+                                        placeholder="Your Email" data-rule="email"
+                                        data-msg="Please enter a valid email" />
+                                    <div class="validate"></div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="subject" id="subject"
+                                    placeholder="Subject" data-rule="minlen:4"
+                                    data-msg="Please enter at least 8 chars of subject" />
+                                <div class="validate"></div>
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" name="message" rows="8" data-rule="required"
+                                    data-msg="Please write something for us" placeholder="Message"></textarea>
+                                <div class="validate"></div>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit">Send Message</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+   
+    </div>
+
+
+    <div class="top fadeIn"><i class="fa fa-arrow-up" aria-hidden="true"></i></div>
+    <script>
+      AOS.init({
+        easing: 'ease-in-out-sine'
+      });
+    </script>
+    <script>
+      $(document).ready(function () {
+        $('.top').click(function () {
+          var body = $("html, body");
+          body.animate({ scrollTop: 0 }, '1000');
+        });
+      });
+  
+      var stickyOffset = jQuery('.top').offset().top;
+  
+      jQuery(window).scroll(function () {
+        var sticky = jQuery('.top'),
+          scroll = jQuery(window).scrollTop();
+  
+  
+        if (scroll > 300) sticky.addClass('scll-top');
+        else sticky.removeClass('scll-top');
+      });
+    </script>
+</body>
+
+</html>
